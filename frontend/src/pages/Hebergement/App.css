@@ -1,0 +1,48 @@
+*{
+    text-transform: capitalize;
+}
+.herbergementHeroImage {
+    width: 100%;
+    min-height: calc(100vh - 240px);
+    position: relative;
+    padding: 60px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .herbergementHeroImage img {
+    position: absolute;
+    inset: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    border-radius: 0 0 0 55px;
+  }
+  
+  .herbergementHeroImage:before {
+    content: "";
+    background: color-mix(in srgb, rgba(0, 27, 68, 0.9), transparent 65%);
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    border-radius: 0 0 0 55px;
+  }
+  
+  .herbergementHeroImage .titre {
+    position: absolute;
+    top: 30%;
+    z-index: 3;
+  }
+  
+  .herbergementHeroImage h3 { 
+    font-size: 29px;
+    font-weight: 700; 
+  } 
+  @media (max-width: 768px) {
+    .herbergementHeroImage h3 {
+      font-size: 29px;
+    } 
+  }
