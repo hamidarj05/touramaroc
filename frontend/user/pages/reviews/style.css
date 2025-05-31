@@ -1,0 +1,97 @@
+body {
+      background-color: #fdfaf6;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(253, 250, 246, 0.9);
+      z-index: -1;
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(78, 52, 46, 0.7), rgba(78, 52, 46, 0.7)), 
+                  url('https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?q=80&w=1000&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .section-title {
+      color: #4e342e;
+      font-weight: 700;
+      margin-bottom: 20px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #d57c34;
+      border-radius: 3px;
+    }
+    
+    .privacy-content {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      padding: 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 50px;
+    }
+    
+    .privacy-content h3 {
+      color: #6d4c41;
+      margin-top: 30px;
+      margin-bottom: 15px;
+    }
+    
+    .privacy-content p, .privacy-content ul {
+      color: #6b4c3b;
+      margin-bottom: 15px;
+    }
+    
+    .privacy-content ul {
+      padding-left: 20px;
+    }
+    
+    .privacy-content li {
+      margin-bottom: 8px;
+    }
+    
+    .highlight-box {
+      background-color: #f7efe7;
+      border-left: 4px solid #d57c34;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    
+    .btn-primary-privacy {
+      background-color: #d57c34;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+    
+    .btn-primary-privacy:hover {
+      background-color: #a05c21;
+    }
+    
+    @media (max-width: 767px) {
+      .privacy-content {
+        padding: 20px;
+      }
+    }

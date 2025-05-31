@@ -1,0 +1,114 @@
+body {
+      background-color: #fdfaf6;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(253, 250, 246, 0.9);
+      z-index: -1;
+    }
+    
+    .hero-section {
+      background: linear-gradient(rgba(78, 52, 46, 0.7), rgba(78, 52, 46, 0.7)), 
+                  url('https://images.unsplash.com/photo-1452421822248-d4c2b47f0c81?q=80&w=1000&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 0;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    
+    .section-title {
+      color: #4e342e;
+      font-weight: 700;
+      margin-bottom: 30px;
+      position: relative;
+      display: inline-block;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: #d57c34;
+      border-radius: 3px;
+    }
+    
+    .accordion-button {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #4e342e;
+      font-weight: 600;
+      padding: 15px 20px;
+      border: none;
+      box-shadow: none;
+    }
+    
+    .accordion-button:not(.collapsed) {
+      background-color: rgba(213, 124, 52, 0.1);
+      color: #4e342e;
+      box-shadow: none;
+    }
+    
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: #d57c34;
+    }
+    
+    .accordion-item {
+      border: none;
+      border-radius: 8px !important;
+      overflow: hidden;
+      margin-bottom: 15px;
+      background-color: rgba(255, 255, 255, 0.95);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    }
+    
+    .accordion-body {
+      padding: 20px;
+      color: #6b4c3b;
+    }
+    
+    .faq-category {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      margin-bottom: 40px;
+    }
+    
+    .btn-primary {
+      background-color: #d57c34;
+      border: none;
+      padding: 10px 25px;
+      border-radius: 30px;
+      font-weight: 600;
+    }
+    
+    .btn-primary:hover {
+      background-color: #a05c21;
+    }
+    
+    .contact-box {
+      background-color: rgba(255, 255, 255, 0.95);
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      margin-top: 50px;
+    }
+    
+    .contact-icon {
+      font-size: 2.5rem;
+      color: #d57c34;
+      margin-bottom: 20px;
+    }
