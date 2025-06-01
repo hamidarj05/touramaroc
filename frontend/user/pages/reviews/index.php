@@ -150,7 +150,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <Link to="/ToursActivities" class="btn btn-primary btn-primary-reviews px-5">Voir nos circuits</Link>
+                <a href="../toursactivities/index.php" class="btn btn-primary btn-primary-reviews px-5">Voir nos circuits</a>
             </div>
         </section>
     </div>
