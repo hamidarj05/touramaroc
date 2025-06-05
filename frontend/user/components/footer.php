@@ -20,21 +20,7 @@
 
 <footer class="footer">
     <div class="container">
-        <div class="footer-cta">
-            <h4 class="mb-3">Planifiez votre aventure marocaine</h4>
-            <p class="mb-4">Recevez notre mini-guide gratuit et des offres exclusives directement par email.</p>
-            <form class="row g-3 justify-content-center">
-                <div class="col-md-5 col-sm-8">
-                    <input type="email" class="form-control" placeholder="Votre adresse email" required>
-                </div>
-                <div class="col-md-auto col-sm-4">
-                    <a href="../accueil/index.php" class="btn-subscribe w-100">
-                        <i class="fas fa-paper-plane me-2"></i>S'inscrire
-                    </a>
-                </div>
-            </form>
-        </div>
-
+        
         <div class="row">
             <div class="col-lg-4 col-md-6 mb-5 mb-md-0">
                 <h5 class="footer-h5">TouraMaroc</h5>
