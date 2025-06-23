@@ -1,0 +1,69 @@
+
+.card-article {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px !important;
+}
+
+.card-article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
+}
+
+.img-article {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px !important;
+    border-top-right-radius: 8px !important;
+}
+
+
+.texte-accroche {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Bannière */
+.banniere-blog {
+    background: url('../../media/images/blogsHero.png');
+    background-size: cover;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    margin-top: 100px;
+
+}
+
+
+/* Article complet */
+.image-principale {
+    max-height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contenu-article {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* .rticle-complet{
+    margin-top: 1300px;
+} */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .img-article {
+        height: 150px;
+    }
+    
+    .banniere-blog {
+        padding: 2rem 0 !important;
+    }
+    
+    .contenu-article {
+        font-size: 1rem;
+    }
+}
+
+

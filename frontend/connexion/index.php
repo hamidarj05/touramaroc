@@ -1,0 +1,159 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TouraMaroc Auth</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../generalCSS/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<div class="container auth-main-container">
+  <!-- Login Card -->
+  <div class="auth-card  auth-card-active" id="loginCard">
+    <div class="auth-card-content">
+      <h3 class="text-center">Connexion</h3>
+      <p class="text-center text-muted">Entrez vos informations pour continuer</p>
+      <form id="loginForm" action="inscription/php/login.php" method="post">
+        <div class="form-group auth-input-group">
+          <input type="email" class="form-control auth-input-field" name="email" placeholder="Adresse e-mail" required />
+        </div>
+        <div class="form-group auth-input-group">
+          <div class="auth-password-wrapper">
+            <input type="password" class="form-control auth-input-field" name="password" placeholder="Mot de passe" id="loginPassword"
+              required />
+            <button type="button" class="auth-password-toggle-btn" onclick="togglePassword('loginPassword', this)">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="auth-forgot-password">
+          <a href="inscription/ForgotEmail.php" onclick="showCard('forgot')">Mot de passe oublié ?</a>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block auth-submit-btn">
+          <i class="fas fa-sign-in-alt mr-2"></i>Se connecter
+        </button>
+        <p class="mt-3 text-center">
+          Pas encore de compte ? <a href="inscription/index.php" onclick="showCard('signup')">S'inscrire</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Signup Card -->
+  <div class="auth-card" id="signupCard">
+    <div class="auth-card-content">
+      <h3 class="text-center">Créer un compte</h3>
+      <p class="text-center text-muted">Commencez votre aventure marocaine</p>
+      <form id="signupForm">
+        <div class="form-group auth-input-group">
+          <input type="text" class="form-control auth-input-field" placeholder="Nom complet" required />
+        </div>
+        <div class="form-group auth-input-group">
+          <input type="email" class="form-control auth-input-field" placeholder="Adresse e-mail" required />
+        </div>
+        <div class="form-group auth-input-group">
+          <div class="auth-password-wrapper">
+            <input type="password" class="form-control auth-input-field" placeholder="Mot de passe" id="signupPassword"
+              required />
+            <button type="button" class="auth-password-toggle-btn" onclick="togglePassword('signupPassword', this)">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <div class="form-group auth-input-group">
+          <div class="auth-password-wrapper">
+            <input type="password" class="form-control auth-input-field" placeholder="Confirmer le mot de passe"
+              id="confirmPassword" required />
+            <button type="button" class="auth-password-toggle-btn" onclick="togglePassword('confirmPassword', this)">
+              <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block auth-submit-btn">
+          <i class="fas fa-user-plus mr-2"></i>S'inscrire
+        </button>
+        <p class="mt-3 text-center">
+          Vous avez déjà un compte ? <a href="#" onclick="showCard('login')">Se connecter</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Forgot Password Card -->
+  <div class="auth-card" id="forgotCard">
+    <div class="auth-card-content">
+      <h3 class="text-center">Réinitialiser votre mot de passe</h3>
+      <p class="text-center text-muted">Entrez votre email pour recevoir un lien</p>
+      <form id="forgotForm">
+        <div class="form-group auth-input-group">
+          <input type="email" class="form-control auth-input-field" placeholder="votre@email.com" required />
+        </div>
+        <button type="submit" class="btn btn-primary btn-block auth-submit-btn">
+          <i class="fas fa-paper-plane mr-2"></i>Envoyer le lien
+        </button>
+        <p class="mt-3 text-center">
+          <a href="#" onclick="showCard('login')"><i class="fas fa-arrow-left mr-2"></i>Retour à la connexion</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+  <!-- Success Popup -->
+  <div class="auth-success-popup" id="successMessage" style="display: none;">
+    <div class="auth-success-icon"><i class="fas fa-check-circle"></i></div>
+    <h4 id="successTitle"></h4>
+    <p id="successText"></p>
+  </div>
+
+  <!-- Info Panel -->
+  <div class="auth-info-panel">
+    <h2>Rejoignez TouraMaroc</h2>
+    <p class="auth-lead-text">
+      Découvrez les merveilles du Maroc, des médinas animées aux paysages désertiques époustouflants.
+    </p>
+    <div class="auth-benefits-grid">
+      <div class="auth-benefit-item">
+        <div class="auth-benefit-icon"><i class="fas fa-route"></i></div>
+        <h4>Itinéraires uniques</h4>
+        <p>Accès à des expériences hors des sentiers battus</p>
+      </div>
+      <div class="auth-benefit-item">
+        <div class="auth-benefit-icon"><i class="fas fa-tag"></i></div>
+        <h4>Avantages membres</h4>
+        <p>Réductions exclusives sur vos voyages</p>
+      </div>
+      <div class="auth-benefit-item">
+        <div class="auth-benefit-icon"><i class="fas fa-heart"></i></div>
+        <h4>Vos favoris</h4>
+        <p>Enregistrez vos lieux préférés</p>
+      </div>
+      <div class="auth-benefit-item">
+        <div class="auth-benefit-icon"><i class="fas fa-clock"></i></div>
+        <h4>Gain de temps</h4>
+        <p>Réservations rapides et sécurisées</p>
+      </div>
+    </div>
+    <p class="auth-welcome-text"><b>Marhba bik !</b> Bienvenue chez les amoureux du Maroc.</p>
+  </div>
+  <script src="inscription/javascript/createAccountPart1.js"></script>
+   <?php if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['message'])): ?>
+  <script>
+        alert(<?php echo json_encode($_GET['message']); ?>);
+      </script>
+    <?php endif; ?>
+  <!-- <script>
+      function togglePassword(inputId, toggleButton) {
+    const input = document.getElementById(inputId);
+    const icon = toggleButton.querySelector('i');
+
+    if (input.type === "password") {
+      input.type = "text";
+      icon.classList.remove("fa-eye");
+      icon.classList.add("fa-eye-slash");
+    } else {
+      input.type = "password";
+      icon.classList.remove("fa-eye-slash");
+      icon.classList.add("fa-eye");
+    }
+  }
+  </script> -->
+</div>
